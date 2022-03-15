@@ -1,0 +1,20 @@
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\bin\Debug\2048 (1.1).exe
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\bin\Debug\2048 (1.1).pdb
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\bin\Debug\2048 (1.1).xml
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\obj\x86\Debug\_2048__1._1_.Form1.resources
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\obj\x86\Debug\_2048__1._1_.Resources.resources
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\obj\x86\Debug\2048 (1.1).vbproj.GenerateResource.Cache
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\obj\x86\Debug\2048 (1.1).exe
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\obj\x86\Debug\2048 (1.1).xml
+C:\Users\lucay\AppData\Local\Temporary Projects\2048 (1.1)\obj\x86\Debug\2048 (1.1).pdb
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\2048 (1.1).exe
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\2048 (1.1).xml
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\2048 (1.1).pdb
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\bin\Debug\2048 (1.1).exe
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\bin\Debug\2048 (1.1).pdb
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\bin\Debug\2048 (1.1).xml
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\2048 (1.1).vbprojAssemblyReference.cache
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\_2048__1._1_.Form1.resources
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\_2048__1._1_.Resources.resources
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\2048 (1.1).vbproj.GenerateResource.cache
+D:\School\IT\Visual Basic\2048\2048 (1.1)\2048 (1.1)\obj\x86\Debug\2048 (1.1).vbproj.CoreCompileInputs.cache
