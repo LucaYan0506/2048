@@ -16,3 +16,5 @@ D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\bin\Debug\2048 (1.2).xml
 D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\_2048__1._2_.Resources.resources
 D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.GenerateResource.cache
 D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\_2048__1._2_.Form1.resources
+D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.AssemblyReference.cache
+D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.CoreCompileInputs.cache

@@ -192,6 +192,7 @@ Public Class Form1
         For i = 1 To blocks.Length - 1
             If blocks(i).Empty = False Then
                 Me.Controls.Remove(blocks(i).pic)
+                blocks(i).Empty = True
             End If
         Next
     End Sub
