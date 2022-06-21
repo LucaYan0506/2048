@@ -31,7 +31,7 @@
 
     End Sub
 
-    Public Sub GenerateNewBlock(ByVal position As Point, ByVal index As Integer)
+    Public Sub GenerateNewBlock(ByVal position As Point, ByVal index As Integer, Optional ByVal givenValue As Integer = -1)
         'tell the computer that this block isn't empty anymore
         Empty = False
         'create a new picturebox
@@ -40,27 +40,25 @@
         'set random values that block can have
         Dim values() As Integer = {2, 2, 2, 2, 2, 2, 2, 4, 4, 4}
 
-        'give it value 
-        Randomize()
-        Value = values(9 * Rnd())
+        If givenValue = -1 Then
+            'give it value 
+            Randomize()
+            Value = values(9 * Rnd())
+        Else
+            Value = givenValue
+        End If
 
         'give it basic properties   
         With pic
-            .Name = "Block" & index
-            If Value = 2 Then
-                .BackgroundImage = Global._2048__1._2_.My.Resources._2
-                .BackColor = Color.FromArgb(255, 198, 198)
-            ElseIf Value = 4 Then
-                .BackgroundImage = Global._2048__1._2_.My.Resources._4
-                .BackColor = Color.FromArgb(255, 150, 150)
-            End If
-            .Location = position
-            .Size = New Size(118, 118)
-        End With
+                .Name = "Block" & index
+                .Location = position
+                .Size = New Size(118, 118)
+            End With
+            UpdateBackGround()
 
-        'add it in form1
-        Form1.Controls.Add(pic)
-        pic.BringToFront()
+            'add it in form1
+            Form1.Controls.Add(pic)
+            pic.BringToFront()
     End Sub
 
     Public Sub UpdateBackGround()
@@ -90,16 +88,34 @@
             pic.BackColor = Color.FromArgb(243, 238, 20)
         ElseIf Value = 512 Then
             pic.BackgroundImage = Global._2048__1._2_.My.Resources._512
-            pic.BackColor = Color.FromArgb(215, 242, 20)
+            pic.BackColor = Color.FromArgb(212, 255, 186)
         ElseIf Value = 1024 Then
             pic.BackgroundImage = Global._2048__1._2_.My.Resources._1024
             pic.BackColor = Color.FromArgb(132, 244, 19)
         ElseIf Value = 2048 Then
             pic.BackgroundImage = Global._2048__1._2_.My.Resources._2048
-            pic.BackColor = Color.FromArgb(101, 153, 163)
+            pic.BackColor = Color.FromArgb(11, 163, 8)
+        ElseIf Value = 4096 Then
+            pic.BackgroundImage = Global._2048__1._2_.My.Resources._4096
+            pic.BackColor = Color.FromArgb(8, 163, 135)
+        ElseIf Value = 8192 Then
+            pic.BackgroundImage = Global._2048__1._2_.My.Resources._8192
+            pic.BackColor = Color.FromArgb(8, 132, 163)
+        ElseIf Value = 16384 Then
+            pic.BackgroundImage = Global._2048__1._2_.My.Resources._16384
+            pic.BackColor = Color.FromArgb(8, 75, 163)
+        ElseIf Value = 32768 Then 'white
+            pic.BackgroundImage = Global._2048__1._2_.My.Resources._32768
+            pic.BackColor = Color.FromArgb(8, 24, 163)
+        ElseIf Value = 65536 Then
+            pic.BackgroundImage = Global._2048__1._2_.My.Resources._65536
+            pic.BackColor = Color.FromArgb(4, 12, 79)
+        ElseIf Value = 131072 Then
+            pic.BackgroundImage = Global._2048__1._2_.My.Resources._131072
+            pic.BackColor = Color.FromArgb(0, 0, 0)
         End If
 
-        pic.BackgroundImageLayout = ImageLayout.Center
+        pic.BackgroundImageLayout = ImageLayout.Zoom
 
     End Sub
 

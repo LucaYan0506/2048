@@ -23,7 +23,6 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Background = New System.Windows.Forms.PictureBox()
         Me.Right_M = New System.Windows.Forms.Timer(Me.components)
         Me.Left_M = New System.Windows.Forms.Timer(Me.components)
         Me.Down_M = New System.Windows.Forms.Timer(Me.components)
@@ -31,21 +30,12 @@ Partial Class Form1
         Me.Go_to_the_blocks = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.NewGameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TestToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ExitToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
-        CType(Me.Background, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Background = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.Background, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
-        '
-        'Background
-        '
-        Me.Background.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.Background.BackgroundImage = Global._2048__1._2_.My.Resources.Resources.Grid_removebg_preview
-        Me.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Background.Location = New System.Drawing.Point(0, 28)
-        Me.Background.Name = "Background"
-        Me.Background.Size = New System.Drawing.Size(520, 519)
-        Me.Background.TabIndex = 5
-        Me.Background.TabStop = False
         '
         'Right_M
         '
@@ -69,7 +59,7 @@ Partial Class Form1
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewGameToolStripMenuItem, Me.ExitToolStripMenuItem2})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewGameToolStripMenuItem, Me.TestToolStripMenuItem, Me.ExitToolStripMenuItem2})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(520, 24)
@@ -82,25 +72,44 @@ Partial Class Form1
         Me.NewGameToolStripMenuItem.Size = New System.Drawing.Size(77, 20)
         Me.NewGameToolStripMenuItem.Text = "New Game"
         '
+        'TestToolStripMenuItem
+        '
+        Me.TestToolStripMenuItem.Name = "TestToolStripMenuItem"
+        Me.TestToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.TestToolStripMenuItem.Text = "Undo"
+        '
         'ExitToolStripMenuItem2
         '
         Me.ExitToolStripMenuItem2.Name = "ExitToolStripMenuItem2"
         Me.ExitToolStripMenuItem2.Size = New System.Drawing.Size(38, 20)
         Me.ExitToolStripMenuItem2.Text = "Exit"
         '
+        'Background
+        '
+        Me.Background.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.Background.BackgroundImage = Global._2048__1._2_.My.Resources.Resources.Grid_removebg_preview
+        Me.Background.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Background.Location = New System.Drawing.Point(0, 28)
+        Me.Background.Name = "Background"
+        Me.Background.Size = New System.Drawing.Size(520, 519)
+        Me.Background.TabIndex = 5
+        Me.Background.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(520, 548)
+        Me.ClientSize = New System.Drawing.Size(520, 546)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Background)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.MaximizeBox = False
         Me.Name = "Form1"
-        Me.Text = "Form1"
-        CType(Me.Background, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "2048"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.Background, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -116,4 +125,5 @@ Partial Class Form1
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents NewGameToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExitToolStripMenuItem2 As ToolStripMenuItem
+    Friend WithEvents TestToolStripMenuItem As ToolStripMenuItem
 End Class

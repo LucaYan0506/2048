@@ -7,16 +7,19 @@ Public Class Form1
     Public BlockToMove, BLockToAchive As BLock
     Public GapX, GapY As Double
     Dim previousLocation(16) As Point
-
+    Dim previousValue(16) As Integer
+    Dim lastBlock As Integer
 
     'key down
     Private Sub Form1_KeyDown(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles MyBase.KeyDown
         If Move_finished = True Then
-
             'get the location of all blocks before moving 
             For i = 1 To 16
+                previousLocation(i) = Nothing
+                previousValue(i) = 0
                 If b(i).Empty = False Then
                     previousLocation(i) = b(i).pic.Location
+                    previousValue(i) = b(i).Value
                 End If
             Next
 
@@ -28,28 +31,24 @@ Public Class Form1
             'check if the user click the correct key 
             Select Case e.KeyCode
                 Case Keys.W, Keys.Up
-
                     'start timer
                     sec = 6
                     Up_M.Start()
                     CorrectKey = True
 
                 Case Keys.S, Keys.Down
-
                     'start timer
                     sec = 6
                     Down_M.Start()
                     CorrectKey = True
 
                 Case Keys.A, Keys.Left
-
                     'start timer
                     sec = 6
                     Left_M.Start()
                     CorrectKey = True
 
                 Case Keys.D, Keys.Right
-
                     'start timer
                     sec = 6
                     Right_M.Start()
@@ -328,6 +327,7 @@ Public Class Form1
                         Random_Empty_XY_in_Position(position, x, y)
                         b(i).GenerateNewBlock(position(x, y).p, i)
                         b(i).Reallocate_location(position, position)
+                        lastBlock = i
                         Exit For
                     End If
                 Next
@@ -447,6 +447,7 @@ Public Class Form1
                         Random_Empty_XY_in_Position(position, x, y)
                         b(i).GenerateNewBlock(position(x, y).p, i)
                         b(i).Reallocate_location(position, position)
+                        lastBlock = i
                         Exit For
                     End If
                 Next
@@ -566,6 +567,7 @@ Public Class Form1
                         Random_Empty_XY_in_Position(position, x, y)
                         b(i).GenerateNewBlock(position(x, y).p, i)
                         b(i).Reallocate_location(position, position)
+                        lastBlock = i
                         Exit For
                     End If
                 Next
@@ -616,45 +618,6 @@ Public Class Form1
 
 
     End Sub
-
-    Private Sub FileToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        DeleteAllBLocks(b)
-    End Sub
-
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Close()
-    End Sub
-
-    Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
-        DeleteAllBLocks(b)
-
-        'generate first 2 blocks
-        Dim x2, y2 As Integer
-        'generate new block
-        For i = 1 To 16
-            If b(i).Empty = True Then
-                Random_Empty_XY_in_Position(position, x2, y2)
-                b(i).GenerateNewBlock(position(x2, y2).p, i)
-                b(i).Reallocate_location(position, position)
-                Exit For
-            End If
-        Next
-
-        'generate new block
-        For i = 1 To 16
-            If b(i).Empty = True Then
-                Random_Empty_XY_in_Position(position, x2, y2)
-                b(i).GenerateNewBlock(position(x2, y2).p, i)
-                b(i).Reallocate_location(position, position)
-                Exit For
-            End If
-        Next
-    End Sub
-
-    Private Sub ExitToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem2.Click
-        Me.Close()
-    End Sub
-
     Private Sub Right_M_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Right_M.Tick
         'do a check after 6 "sec" (sec is the variable not second) (6 because a complete move of block is done when sec = 6) 
         If sec = 6 Then
@@ -724,6 +687,7 @@ Public Class Form1
                         Random_Empty_XY_in_Position(position, x, y)
                         b(i).GenerateNewBlock(position(x, y).p, i)
                         b(i).Reallocate_location(position, position)
+                        lastBlock = i
                         Exit For
                     End If
                 Next
@@ -774,6 +738,75 @@ Public Class Form1
 
 
     End Sub
+
+    Private Sub FileToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        DeleteAllBLocks(b)
+    End Sub
+
+    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs)
+        Me.Close()
+    End Sub
+
+    Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
+        DeleteAllBLocks(b)
+
+        'generate first 2 blocks
+        Dim x2, y2 As Integer
+        'generate new block
+        For i = 1 To 16
+            If b(i).Empty = True Then
+                Random_Empty_XY_in_Position(position, x2, y2)
+                b(i).GenerateNewBlock(position(x2, y2).p, i)
+                b(i).Reallocate_location(position, position)
+                Exit For
+            End If
+        Next
+
+        'generate new block
+        For i = 1 To 16
+            If b(i).Empty = True Then
+                Random_Empty_XY_in_Position(position, x2, y2)
+                b(i).GenerateNewBlock(position(x2, y2).p, i)
+                b(i).Reallocate_location(position, position)
+                Exit For
+            End If
+        Next
+    End Sub
+
+    Private Sub TestToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TestToolStripMenuItem.Click
+        If Move_finished = True Then
+
+            'clear the current block's location 
+            For x = 1 To 4
+                For y = 1 To 4
+                    position(x, y).blocks = New BLock
+                    position(x, y).name = "Empty"
+                    position(x, y).blocks.Empty = True
+                Next
+            Next
+
+            'clear picture box
+            Me.Controls.Remove(b(lastBlock).pic)
+            b(lastBlock).Empty = True
+
+            'set b to previou locations
+            For i = 1 To 16
+                Me.Controls.Remove(b(i).pic)
+                b(i) = New BLock
+                If previousLocation(i) <> Nothing Then
+                    b(i).GenerateNewBlock(previousLocation(i), i, previousValue(i))
+                    b(i).Reallocate_location(position, position)
+                End If
+            Next
+        End If
+    End Sub
+
+    Private Sub ExitToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem2.Click
+        Me.Close()
+    End Sub
+
+
+
 
     'get random empty position
     Private Sub Random_Empty_XY_in_Position(ByVal pos(,) As CustomizePoint, ByRef x As Integer, ByRef y As Integer)
