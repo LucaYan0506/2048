@@ -1,8 +1,9 @@
 # 2048
 I think everyone know what is 2048 and how to play. If not click [here](https://www.gameskinny.com/lnagr/2048-game-strategy-how-to-always-win-at-2048) to see the rule.
 I re-did this game using VB.  
+The highest number you can get is 131072
 Download the game and try to beat me!  
-![image](https://user-images.githubusercontent.com/83918638/168163438-60b972aa-a555-4427-88f5-167319188e8c.png)
+![image](https://user-images.githubusercontent.com/83918638/174884865-f2a8c2ad-3a46-4891-aa9b-b9a199fbb708.png)
 
 
 ## How to download the game
