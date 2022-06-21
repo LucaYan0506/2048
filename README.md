@@ -1,9 +1,13 @@
 # 2048
 I think everyone know what is 2048 and how to play. If not click [here](https://www.gameskinny.com/lnagr/2048-game-strategy-how-to-always-win-at-2048) to see the rule.
-I re-did this game using VB
+I re-did this game using VB.  
+The highest number you can get is 131072.  
+Download the game and try to beat me!  
+![image](https://user-images.githubusercontent.com/83918638/174885964-4f69fe32-a5f0-4155-80c3-b1360e088979.png)
+
 
 ## How to download the game
-Click [here](https://github.com/LucaYan0506/2048/releases/download/v1.0.0/2048.1.2.exe) to download the game (for windows). 
+Click [here](https://github.com/LucaYan0506/2048/releases/download/v1.0.1/2048.1.2.exe) to download the game (for windows). 
 
 #### Chrome
 If you are using Google Chrome, it may block download.   
