@@ -748,6 +748,10 @@ Public Class Form1
     End Sub
 
     Private Sub NewGameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewGameToolStripMenuItem.Click
+        Dim result = MsgBox("Are you sure to start a new game", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.No Then
+            Exit Sub
+        End If
         DeleteAllBLocks(b)
 
         'generate first 2 blocks
@@ -802,7 +806,10 @@ Public Class Form1
     End Sub
 
     Private Sub ExitToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem2.Click
-        Me.Close()
+        Dim result = MsgBox("Are you sure to exit", MsgBoxStyle.YesNo)
+        If result = MsgBoxResult.Yes Then
+            Me.Close()
+        End If
     End Sub
 
 

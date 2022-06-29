@@ -18,3 +18,16 @@ D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vb
 D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\_2048__1._2_.Form1.resources
 D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.AssemblyReference.cache
 D:\School\IT\Visual Basic\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.CoreCompileInputs.cache
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\bin\Debug\2048 (1.2).exe.config
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\bin\Debug\2048 (1.2).exe
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\bin\Debug\2048 (1.2).pdb
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\bin\Debug\2048 (1.2).xml
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.AssemblyReference.cache
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.SuggestedBindingRedirects.cache
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\_2048__1._2_.Form1.resources
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\_2048__1._2_.Resources.resources
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.GenerateResource.cache
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).vbproj.CoreCompileInputs.cache
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).exe
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).xml
+C:\Users\Zhong Yi Yan\Desktop\Side Projects\2048\2048 (1.2)\2048 (1.2)\obj\x86\Debug\2048 (1.2).pdb
