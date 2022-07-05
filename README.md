@@ -7,7 +7,7 @@ Download the game and try to beat me!
 
 
 ## How to download the game
-Click [here](https://github.com/LucaYan0506/2048/releases/download/V1.0.2/2048.exe) to download the game (for windows). 
+Click [here](https://github.com/LucaYan0506/2048/releases/download/V1.0.3/2048.exe) to download the game (for windows). 
 
 #### Chrome
 If you are using Google Chrome, it may block download.   
